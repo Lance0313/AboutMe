@@ -1,8 +1,15 @@
 Vue.createApp({
     data() {
         return {
-            name: 'Lance G. Del Rosario',
-            degree: 'BS in Computer Engineering'
+            h1: 'Lance G. Del Rosario',
+            h2: 'BS in Computer Engineering'
         };
+    },
+    methods:{
+        changeTitle(){
+            this.h1 = 'Lance G. Del Rosario Jr.'
+            this.h2 = ''
+
+        }
     }
-}).mount('#profileName');
+}).mount('#body');
