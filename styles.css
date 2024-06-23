@@ -4,3 +4,11 @@ body, html, .d-flex{
 #idPic{
     width:80%
 }
+.left-div{
+    height: 100vh; background-color: #163853;
+}
+#navButton {
+    transition: background-color 0.3s ease;
+    border: 20px;
+    border-radius: 20px;
+}
