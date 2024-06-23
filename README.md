@@ -1,2 +1,2 @@
 # AboutMe
-A website that contains my biography. Built using Vue.Js
+Creating a website for my learning journey in Vue
