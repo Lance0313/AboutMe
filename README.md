@@ -1,2 +1,7 @@
 # AboutMe
-Creating a website for my learning journey in Vue
+My Portfolio.
+
+Created using:
+HTML/Bootstrap 5
+CSS/animate.css
+JS/Vue.js
