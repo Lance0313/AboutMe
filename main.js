@@ -19,26 +19,21 @@ Vue.createApp({
             this.h2 = ''
         },
         nextPage() {
-            if(this.currentPage == 3){
-                this.page1 = true;
-                this.page2 = false;
-                this.page3 = false;
-                this.currentPage = 1;
-                console.log(this.currentPage)
-            }
-            else if(this.currentPage == 1){
+            if (this.currentPage === 1) {
                 this.page1 = false;
                 this.page2 = true;
                 this.page3 = false;
                 this.currentPage++;
-                console.log(this.currentPage)
-            }
-            else if(this.currentPage == 2){
+            } else if (this.currentPage === 2) {
                 this.page1 = false;
                 this.page2 = false;
                 this.page3 = true;
                 this.currentPage++;
-                console.log(this.currentPage)
+            } else if (this.currentPage === 3) {
+                this.page1 = true;
+                this.page2 = false;
+                this.page3 = false;
+                this.currentPage = 1;
             }
         },
         navMouseHover(){
