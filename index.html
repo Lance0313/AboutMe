@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
-<body id="body" class="bg-light">
-    <ul class="nav align-items-center">
+<body id="body" class="bg-body-secondary">
+    <ul class="nav align-items-center bg-light">
         <li class="nav-item">
             <a class="nav-link disabled" aria-current="page" aria-disabled="true" href="index.html">Home</a>
         </li>
@@ -21,6 +21,10 @@
         <li class="nav-item">
             <a class="nav-link" href="Bee Bugoy's.html">Bee Bugoy's Meat Shop</a>
         </li>
+        <div class="d-flex align-items-center ms-auto pe-auto">
+            <i class="fa-solid fa-play" style="color: #0008ff;" @click="playMusic"></i>
+            <audio ref="audioPlayer1" src="Sound/Spaghetti.mp3"></audio>
+        </div>
         <div class="form-check form-switch d-flex align-items-center ms-auto pe-3">
             <input class="form-check-input" type="checkbox">
             <label>Dark Mode</label>
@@ -72,6 +76,23 @@
                     </div>
                 </transition>
                 <transition name="fade">
+                    <div class="flex-column" v-if="page2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <h1 class="text-secondary p-3" styles="font-size:500rem;">{{work1}}</h1>
+                            <h1 class="text-primary">{{work2}}</h1>
+                        </div>
+                        <div class="d-flex">
+                            <div class="w-100"></div>
+                            <div class="p-2 flex-shrink-1">
+                                <p>
+                                {{workDescription}}
+                                </p>
+                            </div>
+                            <div class="w-100"></div>
+                        </div>
+                    </div>
+                </transition>
+                <transition name="fade">
                     <div class="flex-column" v-if="page3">
                         <div class="d-flex justify-content-center align-items-center">
                             <i class="fa-solid fa-phone text-primary-gray fs-1 p-3"></i>
@@ -90,10 +111,7 @@
             </div>
         </div>
         <div class="d-flex justify-content-center align-items-center p-1">
-            <i id="navButton" class="fa-solid fa-circle-right p-2" style="color: #0008ff;" @click="buttonClick" @mouseover="navMouseHover" @mouseleave="navMouseLeave"></i>
-            <audio ref="audioPlayer1" src="Sound/p1.mp3"></audio>
-            <audio ref="audioPlayer2" src="Sound/p2.mp3"></audio>
-            <audio ref="audioPlayer3" src="Sound/p3.mp3"></audio>
+            <i id="navButton" class="fa-solid fa-circle-right p-2" style="color: #0008ff;" @click="nextPage" @mouseover="navMouseHover" @mouseleave="navMouseLeave"></i>
         </div>
     </div>
     <script src="main.js"></script>

@@ -10,36 +10,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
-<body id="body" class="bg-light">
-        <ul class="nav align-items-center">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Resume.html">Resume</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" aria-current="page" aria-disabled="true" href="Bee Bugoy's.html">Bee Bugoy's Meat Shop</a>
-            </li>
-            <div class="form-check form-switch d-flex align-items-center ms-auto pe-3">
-                <input class="form-check-input" type="checkbox" @click="setDark">
-                <label>Dark Mode</label>
-            </div>
-        </ul>
-        
-    
-    
-        
-            
-    
-    <div class="d-flex flex-column justify-content-center align-items-center border border-danger">
-        <div class="controls d-flex justify-content-end align-items-center border border-primary">
-            <i class="fa-solid fa-xmark" v-if="bee1" @click="CloseTab"></i>
-            <i class="fa-solid fa-play" v-if="bee2" @click="OpenTab"></i>
+<body id="body" class="bg-body-secondary">
+    <ul class="nav align-items-center bg-light">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Resume.html">Resume</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" aria-current="page" aria-disabled="true" href="Bee Bugoy's.html">Bee Bugoy's Meat Shop</a>
+        </li>
+        <div class="form-check form-switch d-flex align-items-center ms-auto pe-3">
+            <input class="form-check-input" type="checkbox" @click="setDark">
+            <label>Dark Mode</label>
+        </div>
+    </ul>
+
+    <div class="d-flex flex-column justify-content-center align-items-center ">
+        <div class="controls d-flex justify-content-end align-items-center">
+            <i class="fa-solid fa-xmark" v-if="bee1" style="color: #0008ff;" @click="CloseTab"></i>
+            <i class="fa-solid fa-play" v-if="bee2" style="color: #0008ff;" @click="OpenTab"></i>
         </div>
         
-        <iframe src="https://lance0313.github.io/Bee-Bugoys-Website/index.html" class="contents border border-danger" v-if="bee1"></iframe>
-        <iframe src="https://lance0313.github.io/Bee-Bugoys-Website/README.md" class="contents border border-danger" v-if="bee2"></iframe>
+        <iframe src="https://lance0313.github.io/Bee-Bugoys-Website/index.html" class="contents" v-if="bee1"></iframe>
+        <iframe src="https://lance0313.github.io/Bee-Bugoys-Website/README.md" class="contents" v-if="bee2"></iframe>
     </div>
     
     <script src="main.js"></script>

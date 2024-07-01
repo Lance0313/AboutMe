@@ -13,7 +13,10 @@ Vue.createApp({
             name2 : 'DEL ROSARIO',
             profilePic: 'https://scontent.fmnl19-1.fna.fbcdn.net/v/t1.15752-9/441729019_1185129549280115_6355664614706063087_n.png?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeE7CzLANQ8S-AL2KdNakTzzMVNZDuaJ7mYxU1kO5onuZm0Vz4sd8PBmhC4-sp02pUWLGpW1kmkpmSVNMz5inpBJ&_nc_ohc=WtejpLD9yMcQ7kNvgH72dHx&_nc_ht=scontent.fmnl19-1.fna&oh=03_Q7cD1QER2nnr_VoJb1jx7TMcU7s0Dydnpqly910RR1XzWC8y_g&oe=669E5CF5',
             nameDescription: "Graduate of BS in Computer Engineering in Adamson University Batch 2024. I have built a few projects during my academic journey in the said university.",
-            course: 'BS in Computer Engineering'
+            course: 'BS in Computer Engineering',
+            work1: "Lambert Williams",
+            work2: "Logistics Inc.",
+            workDescription: "I am a Full-Stack Developer Intern. Developed the company's HRIS and CRM, along with designing front-end websites for the company's clients."
         };
     },
     methods:{
@@ -43,23 +46,10 @@ Vue.createApp({
             document.getElementById('navButton').style.background = 'gray'
         },
         navMouseLeave(){
-            document.getElementById('navButton').style.background = 'white'
+            document.getElementById('navButton').style.background = '#E9ECEF'
         },
         playMusic() {
-            if (this.currentPage === 1){
-                this.$refs.audioPlayer1.play();
-            }
-            else if (this.currentPage === 2){
-                this.$refs.audioPlayer2.play();
-            }
-            else if (this.currentPage === 3){
-                this.$refs.audioPlayer3.play();
-            }
-            
-        },
-        buttonClick(){
-            this.playMusic();
-            this.nextPage();
+            this.$refs.audioPlayer1.play();
         },
         OpenTab(){
             this.bee1 = true;
