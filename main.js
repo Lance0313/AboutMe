@@ -8,6 +8,8 @@ Vue.createApp({
             page3: false,
             bee1: true,
             bee2: false,
+            opentab: false,
+            closeTab: true,
             dark: false,
             name1: 'LANCE ',
             name2 : 'DEL ROSARIO',
@@ -54,10 +56,14 @@ Vue.createApp({
         OpenTab(){
             this.bee1 = true;
             this.bee2 = false;
+            this.openTab = false;
+            this.closeTab = true;
         },
         CloseTab(){
             this.bee1 = false;
             this.bee2 = true;
+            this.openTab = true;
+            this.closeTab = false;
         },
         setDark(){
             this.dark = !this.dark;

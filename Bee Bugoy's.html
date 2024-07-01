@@ -26,15 +26,19 @@
             <label>Dark Mode</label>
         </div>
     </ul>
-
-    <div class="d-flex flex-column justify-content-center align-items-center ">
-        <div class="controls d-flex justify-content-end align-items-center">
-            <i class="fa-solid fa-xmark" v-if="bee1" style="color: #0008ff;" @click="CloseTab"></i>
-            <i class="fa-solid fa-play" v-if="bee2" style="color: #0008ff;" @click="OpenTab"></i>
+    <div class="d-flex flex-column justify-content-center align-items-center mt-5">
+        <div class="controls d-flex justify-content-end align-items-center border rounded-top bg-dark">
+            <i class="fa-solid fa-xmark p-1 pe-2" v-if="closeTab" style="color: #0008ff;" @click="CloseTab"></i>
+            <i class="fa-solid fa-play p-1 pe-2" v-if="openTab" style="color: #0008ff;" @click="OpenTab"></i>
         </div>
-        
-        <iframe src="https://lance0313.github.io/Bee-Bugoys-Website/index.html" class="contents" v-if="bee1"></iframe>
-        <iframe src="https://lance0313.github.io/Bee-Bugoys-Website/README.md" class="contents" v-if="bee2"></iframe>
+        <div class="d-flex justify-content-center divcon">
+            <transition name="fade">
+                <iframe src="https://lance0313.github.io/Bee-Bugoys-Website/index.html" class="contents" v-if="bee1"></iframe>
+            </transition>
+            <transition name="fade">
+                <iframe src="https://lance0313.github.io/Bee-Bugoys-Website/README.md" class="contents" v-if="bee2"></iframe>
+            </transition>
+        </div>
     </div>
     
     <script src="main.js"></script>
