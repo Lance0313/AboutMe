@@ -6,6 +6,9 @@ Vue.createApp({
             page1: true,
             page2: false,
             page3: false,
+            bee1: true,
+            bee2: false,
+            dark: false,
             name1: 'LANCE ',
             name2 : 'DEL ROSARIO',
             profilePic: 'https://scontent.fmnl19-1.fna.fbcdn.net/v/t1.15752-9/441729019_1185129549280115_6355664614706063087_n.png?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeE7CzLANQ8S-AL2KdNakTzzMVNZDuaJ7mYxU1kO5onuZm0Vz4sd8PBmhC4-sp02pUWLGpW1kmkpmSVNMz5inpBJ&_nc_ohc=WtejpLD9yMcQ7kNvgH72dHx&_nc_ht=scontent.fmnl19-1.fna&oh=03_Q7cD1QER2nnr_VoJb1jx7TMcU7s0Dydnpqly910RR1XzWC8y_g&oe=669E5CF5',
@@ -41,6 +44,33 @@ Vue.createApp({
         },
         navMouseLeave(){
             document.getElementById('navButton').style.background = 'white'
+        },
+        playMusic() {
+            if (this.currentPage === 1){
+                this.$refs.audioPlayer1.play();
+            }
+            else if (this.currentPage === 2){
+                this.$refs.audioPlayer2.play();
+            }
+            else if (this.currentPage === 3){
+                this.$refs.audioPlayer3.play();
+            }
+            
+        },
+        buttonClick(){
+            this.playMusic();
+            this.nextPage();
+        },
+        OpenTab(){
+            this.bee1 = true;
+            this.bee2 = false;
+        },
+        CloseTab(){
+            this.bee1 = false;
+            this.bee2 = true;
+        },
+        setDark(){
+            this.dark = !this.dark;
         }
     }
 }).mount('#body');

@@ -18,6 +18,13 @@
         <li class="nav-item">
             <a class="nav-link" href="Resume.html">Resume</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Bee Bugoy's.html">Bee Bugoy's Meat Shop</a>
+        </li>
+        <div class="form-check form-switch d-flex align-items-center ms-auto pe-3">
+            <input class="form-check-input" type="checkbox">
+            <label>Dark Mode</label>
+        </div>
     </ul>
 
     <div class="d-flex">
@@ -69,30 +76,26 @@
                         <div class="d-flex justify-content-center align-items-center">
                             <i class="fa-solid fa-phone text-primary-gray fs-1 p-3"></i>
                             <h1 class="text-primary">09454655040</h1>
-                            
                         </div>
                         <div class="d-flex justify-content-center align-items-center">
                             <i class="fa-brands fa-facebook text-primary-gray fs-1 p-3"></i>
                             <h1 class="text-primary">fb.com/lance.delrosario.7503</h1>
-                            
                         </div>
                         <div class="d-flex justify-content-center align-items-center">
-                                <i class="fa-brands fa-github text-primary-gray fs-1 p-3"></i>
-                                <h1 class="text-primary">github.com/Lance0313</h1>
+                            <i class="fa-brands fa-github text-primary-gray fs-1 p-3"></i>
+                            <h1 class="text-primary">github.com/Lance0313</h1>
                         </div>
                     </div>
                 </transition>
-                
-                
             </div>
         </div>
         <div class="d-flex justify-content-center align-items-center p-1">
-            <i id="navButton" class="fa-solid fa-circle-right p-2" style="color: #0008ff;" @click="nextPage" @mouseover="navMouseHover" @mouseleave="navMouseLeave"></i>
+            <i id="navButton" class="fa-solid fa-circle-right p-2" style="color: #0008ff;" @click="buttonClick" @mouseover="navMouseHover" @mouseleave="navMouseLeave"></i>
+            <audio ref="audioPlayer1" src="Sound/p1.mp3"></audio>
+            <audio ref="audioPlayer2" src="Sound/p2.mp3"></audio>
+            <audio ref="audioPlayer3" src="Sound/p3.mp3"></audio>
         </div>
-        
     </div>
-    
-
     <script src="main.js"></script>
 </body>
 </html>
